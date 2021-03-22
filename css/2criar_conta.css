@@ -1,0 +1,44 @@
+h5{
+    color: rgb(148, 143, 143);
+}
+
+.imagem {color: rgb(208, 208, 230);
+display: grid ;
+border-bottom: rgb(160, 160, 253);}
+#email {
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+}
+#nome{
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+}
+#pais{
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+
+}
+#class {
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+
+}
+#pass{
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+}
+#tel {
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+}
+#data {
+    border-radius: 8px;
+    background: rgb(204, 226, 214);
+}
+
+body{
+    background: rgb(212, 213, 214);
+}
+fieldset{
+    background: white;
+}

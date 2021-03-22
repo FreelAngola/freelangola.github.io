@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sessão</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="icon" type="../img/blogs-for-freelancers.png" href="../img/blogs-for-freelancers.png"/>
+    <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
+    <style>
+      *{
+        margin: 2px;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <button class="btn btn-outline-primary"><a href="../html/index.html"> Freelancers AO</a></button>
+    </nav>
+    <form action="../php/session.php" method="post">
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEmail4">Email</label>
+          <input type="email" name="email" class="form-control" id="inputEmail4">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Password</label>
+          <input type="password" name="pass" class="form-control" id="inputEmail4">
+        </div>
+      </div>
+      <button class="btn btn-primary">Iniciar sessão</button>
+    </form>
+    <a href="../html/CriarConta.html">crie uma conta!</a>
+  </body>
+</html>

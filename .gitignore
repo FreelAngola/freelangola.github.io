@@ -1,0 +1,8 @@
+# default ignored files
+*.zip
+/idea
+/vscode
+
+# extra ignored files
+/img/favicon/htmlmetaicons
+/html/all-professors.html

@@ -1,96 +1,131 @@
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/2criar_conta.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/2criar_conta.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>criar conta gokside</title>
-    <link rel="icon" href="../img/icon.JPG"/>
-    <style>
-        *{
-            font-family: Century Gothic;
-            font-size:12pt;
-        }
-        fieldset{
-            border-radius: 10px;
-            border: 1px;
-        }
-        body{
-            color: #a0a0a0;
-        }
-    </style>
-</head>
+    <link rel="icon" href="../img/icon.JPG" />
+  </head>
 
-<body>
+  <body>
     <h1>Preencha os seus dados</h1>
     <fieldset>
-        <legend>Dados pessoais</legend>
-        <form action="../php/inde.php" method="post"  enctype="multipart/form-data">
-            <p>Nome
-                <li>
-                    <input type="text" id="nome" name="nome" placeholder="nome e sobrenome" required="true">
-                </li>
-            </p>
+      <legend>Dados pessoais</legend>
+      <form
+        action="../php/inde.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <p
+          >Nome
+          <li>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="nome e sobrenome"
+              required="true"
+            />
+          </li>
+        </p>
 
+        <p
+          >Email
+          <li>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@gmail.com"
+              required="true"
+            />
+          </li>
+        </p>
 
-            <p>Email
-                <li>
-                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required="true">
-                </li>
-            </p>
+        <p
+          >País
+          <li>
+            <select name="pais" id="pais">
+              <option value="Angola">Angola</option>
+              <option value="Moçambique">Moçambique</option>
+              <option value="Cabo verde">Cabo verde</option>
+              <option value="Guiné Bissau">Guiné Bissau</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Brasil">Brasil</option>
+            </select>
+          </li>
+        </p>
 
-            <p>País
-                <li>
-                    <select name="pais" id="pais">
-                        <option value="Angola">Angola</option>
-                        <option value="Moçambique">Moçambique</option>
-                        <option value="Cabo verde">Cabo verde</option>
-                        <option value="Guiné Bissau">Guiné Bissau</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Côte D'voir">Côte D'voir</option>
-                    </select>
-                </li>
-            </p>
+        <p
+          >Data de Nascimento
+          <li>
+            <input
+              type="date"
+              name="data"
+              id="data"
+              placeholder="dia/mês/ano"
+              required="true"
+            />
+          </li>
+        </p>
 
-            <p>Data de Nascimento 
-                <li>
-                    <input type="date" name="data"  id="data" placeholder="dia/mês/ano" required="true">
-                </li>
-            </p>
+        <p
+          >Telemóvel
+          <li>
+            <input
+              type="tel"
+              name="telefone"
+              id="tel"
+              placeholder="telefone"
+              required="true"
+            />
+          </li>
+        </p>
 
-            <p>Telemóvel
-                <li>
-                    <input type="tel" name="telefone"  id="tel" placeholder="telefone" required="true">
-                </li>
-            </p>
+        <p
+          >crie uma Password
+          <li>
+            <input
+              type="password"
+              name="palavrapasse"
+              id="pass"
+              placeholder="palavra passe"
+              required="true"
+            />
+          </li>
+        </p>
 
-            <p>crie uma Password
-                <li>
-                    <input type="password" name="palavrapasse" id="pass" placeholder="palavra passe" required="true">
-                </li>
-            </p>
+        <p
+          >confirmar palavra passe
+          <li>
+            <input
+              type="password"
+              name="palavrapasse"
+              id="pass"
+              placeholder="reinsira palavra passe"
+            />
+          </li>
+        </p>
 
-            <p>confirmar palavra passe 
-                <li>
-                    <input type="password" name="palavrapasse" id="pass" placeholder="reinsira palavra passe" >
-                </li>
-            </p>
-
-            <p>ao submeter estes dados, está aceitando as condições e politicas deste site!</p>
-            <center>
-                <input type="submit"  value="submeter" >
-            </center>
-        </form>
-        <br>
+        <p
+          >Ao submeter estes dados, está aceitando as condições e politicas
+          deste site!</p
+        >
         <center>
-            <i> já possui uma conta?</i> <a href="../html/iniciarsessao.html">Iniciar sessão</a>
+          <input type="submit" value="submeter" />
         </center>
+      </form>
+      <br />
+      <center>
+        <i> já possui uma conta?</i>
+        <a href="../html/iniciarsessao.html">Iniciar sessão</a>
+      </center>
     </fieldset>
 
     <center>
-        <h5><footer> @gokside. Copyright: 2020 /gokside </footer></h5>
+      <h5><footer> @gokside. Copyright: 2020 /gokside </footer></h5>
     </center>
-    <hr>
-</body>
+    <hr />
+  </body>
 </html>

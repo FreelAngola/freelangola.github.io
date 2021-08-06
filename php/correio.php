@@ -1,24 +1,25 @@
 <?php
-    session_start();
-    include("header.php");
+session_start();
+include("header.php");
 
-    if((!isset($_SESSION['telefone'])== true) || (!isset ($_SESSION['pass'])==true)){
-        unset($_SESSION['telefone']);
-        unset( $_SESSION['pp']);
-    }
-    $a=$_SESSION['pass'];
-    $_SESSION["passe"]=$a;
-    $consulta = "SELECT * FROM cadastrados WHERE pass='$a'"; 
-    $resultado =  $mysqli_connection->query($consulta ); 
-    $dado = mysqli_fetch_array($resultado);  
-    $log= $dado['nome'];
-    $id= $dado['id'];
-    $_SESSION['login']=$log;
-    $_SESSION['id']=$id;
+if ((!isset($_SESSION['telefone']) == true) || (!isset($_SESSION['pass']) == true)) {
+    unset($_SESSION['telefone']);
+    unset($_SESSION['pp']);
+}
+$a = $_SESSION['pass'];
+$_SESSION["passe"] = $a;
+$consulta = "SELECT * FROM cadastrados WHERE pass='$a'";
+$resultado =  $mysqli_connection->query($consulta);
+$dado = mysqli_fetch_array($resultado);
+$log = $dado['nome'];
+$id = $dado['id'];
+$_SESSION['login'] = $log;
+$_SESSION['id'] = $id;
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,20 +27,22 @@
     <title>InBox - correio</title>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <link rel="icon" type="../img/blogs-for-freelancers.png" href="../img/blogs-for-freelancers.png"/>
+    <link rel="icon" type="../img/blogs-for-freelancers.png" href="../img/blogs-for-freelancers.png" />
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <style>
-    #hh{
-        text-align:center;
-    }
+        #hh {
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <span id="hh" class="span">Caixa de Correio</span>   
+        <span id="hh" class="span">Caixa de Correio</span>
     </nav>
-    <div class="tabbable"> <!-- Only required for left/right tabs -->
+    <div class="tabbable">
+        <!-- Only required for left/right tabs -->
         <ul class="nav nav-tabs">
             <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
             <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
@@ -66,4 +69,5 @@
         </div>
     </div>
 </body>
+
 </html>

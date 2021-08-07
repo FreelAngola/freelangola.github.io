@@ -74,10 +74,8 @@ $ia = $dados['id'];
     #fie2 {
       border-radius: 18px;
       border: 0.9px;
-      Borde: 0.9px;
       border-color: rgb(192, 124, 255);
       background-color: rgb(192, 124, 255);
-
     }
 
     #img {
@@ -168,45 +166,57 @@ $ia = $dados['id'];
 <body>
 
   <fieldset id="fie2">
-    <center><a id="a_top" href="site.php">Inicial | </a>
-
+    <center>
+      <a id="a_top" href="site.php">Inicial | </a>
       <a id="a_top" href="perfil_gokside_2020.php">Perfil |</a>
-      <a id="a_top" href="chatgoksidersonline.php">Amigos Online <?php $fu = $_SESSION['chat'];
-                                                                  if ($fu < 1) {
-                                                                    echo "";
-                                                                  }
-                                                                  if ($fu > 0) {
-                                                                    echo "(" . $fu . ")";
-                                                                  } ?>
+      <a id="a_top" href="chatgoksidersonline.php">
+        Amigos Online
+        <?php $fu = $_SESSION['chat'];
+        if ($fu < 1) {
+          echo "";
+        }
+        if ($fu > 0) {
+          echo "(" . $fu . ")";
+        } ?>|
+      </a>
+      <a id="a_top" href="notificacao.php">
+        <strong>
+          Novidades
+          <?php $fuu = $_SESSION['noti'];
+          if ($fuu < 1) {
+            echo "";
+          }
+          if ($fuu > 0) {
+            echo "(" . $fuu . ")";
+          } ?>
+        </strong>|
+      </a>
 
-        |</a>
+      <a id="a_top" href="mensagens.php">
+        <strong>
+          Conversas
+          <?php $consult = "SELECT DISTINCT mensageiro FROM msg ";
+          $resu = $mysqli_connection->query($consult);
+          $res = mysqli_num_rows($resu);
 
-      <a id="a_top" href="notificacao.php"><strong>Novidades <?php $fuu = $_SESSION['noti'];
-                                                              if ($fuu < 1) {
-                                                                echo "";
-                                                              }
-                                                              if ($fuu > 0) {
-                                                                echo "(" . $fuu . ")";
-                                                              } ?>
+          $rest = $res - 1;
+          echo "(" . $rest . ")";
 
-        </strong>|</a>
-
-      <a id="a_top" href="mensagens.php"><strong>Conversas <?php $consult = "SELECT DISTINCT mensageiro FROM msg ";
-                                                            $resu = $mysqli_connection->query($consult);
-                                                            $res = mysqli_num_rows($resu);
-
-                                                            $rest = $res - 1;
-                                                            echo "(" . $rest . ")";
-
-                                                            ?> </strong>|</a>
+          ?>
+        </strong>|
+      </a>
 
 
-      <a id="a_top" href="pub_emprego.php"><strong>OLX <?php $consultr = "SELECT * FROM empregos ";
-                                                        $resur = $mysqli_connection->query($consultr);
-                                                        $resr = mysqli_num_rows($resur);
-                                                        echo "(" . $resr . ")";
+      <a id="a_top" href="pub_emprego.php">
+        <strong>OLX
+          <?php $consultr = "SELECT * FROM empregos ";
+          $resur = $mysqli_connection->query($consultr);
+          $resr = mysqli_num_rows($resur);
+          echo "(" . $resr . ")";
 
-                                                        ?> </strong>|</a>
+          ?>
+        </strong>|
+      </a>
       <a id="a_top" href="covid.html">Sobre a COVID-19 |</a>
       <a id="a_top" href="jogos.html">Jogos |</a>
       <a id="a_top" href="menu.php">Menu </a>
@@ -228,14 +238,24 @@ $ia = $dados['id'];
 
       ?>
       <?php echo "<a href='uploads/" . $usuario->foto . "'><center><div class='foto'><img src='uploads/" . $usuario->foto . "' alt='" . $per . "' id='img' /></a></div></center>";
-      } ?><br><a href="perpic.php">adicionar uma foto para o perfil</a>
-      <p class="perfil_name"><strong><?= $per ?></strong><br><button id='post'><a href="seguidoresgokside.php">Seguidores: <?php
-
-                                                                                                                            $iddo = $_SESSION['id'];
-                                                                                                                            $consultac = "SELECT * FROM seguidores WHERE seguindo_id='$iddo'";
-                                                                                                                            $resultadoc = $mysqli_connection->query($consultac);
-                                                                                                                            $rec = mysqli_num_rows($resultadoc);
-                                                                                                                            echo $rec; ?></a></button></p>
+      } ?>
+      <br>
+      <a href="perpic.php">adicionar uma foto para o perfil</a>
+      <p class="perfil_name">
+        <strong><?= $per ?></strong>
+        <br>
+        <button id='post'>
+          <a href="seguidoresgokside.php">
+            Seguidores:
+            <?php
+            $iddo = $_SESSION['id'];
+            $consultac = "SELECT * FROM seguidores WHERE seguindo_id='$iddo'";
+            $resultadoc = $mysqli_connection->query($consultac);
+            $rec = mysqli_num_rows($resultadoc);
+            echo $rec; ?>
+          </a>
+        </button>
+      </p>
     </fieldset>
   </center>
 
@@ -248,15 +268,13 @@ $ia = $dados['id'];
   ?>
     <hr>
     <p id='mar'><?php echo "<strong id='st'>" . $dados['username'] . "</strong>"; ?>
-      <?php echo "<br>" . $dados['conteudo'] . ""; ?></p><?php
-                                                          echo "<span id='mar'><small id='s'>" . $dados['momento'] . "</small></span>";
-                                                        } ?>
+      <?php echo "<br>" . $dados['conteudo'] . ""; ?>
+    </p><?php
+        echo "<span id='mar'><small id='s'>" . $dados['momento'] . "</small></span>";
+      } ?>
   <hr>
   <div class="foot">
   </div>
-
-
-
 </body>
 
 </html>

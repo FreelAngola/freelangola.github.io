@@ -21,11 +21,11 @@ $log = $dado['nome'];
 
 <head>
    <title>Mensagem para AngoFreela</title>
-   <link rel="icon" href="icon.JPG" />
+   <link rel="icon" href="../img/icon.JPG" />
 
-   <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-   <script src="js/jquery.min.js"></script>
-   <script src="js/bootstrap/bootstrap.js"></script>
+   <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+   <script src="../js/jquery.min.js"></script>
+   <script src="../js/bootstrap/bootstrap.min.js"></script>
 
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,8 +100,8 @@ $log = $dado['nome'];
             <li class="nav-item"><a href="dashboard.php" class="nav-link">Free Jobs</a></li>
             <li class="nav-item"><a href="chat.php" class="nav-link">Correio</a></li>
             <li class="nav-item"><a href="termosdeuso.php" class="nav-link">Termos de uso e regulamentos</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-            <li class="nav-item"><a href="iniciarsessao.html" class="nav-link">logout</a></li>
+            <li class="nav-item"><a href="../html/menu.html" class="nav-link">Menu</a></li>
+            <li class="nav-item"><a href="../html/iniciarsessao.html" class="nav-link">logout</a></li>
          </ul>
       </div>
    </nav>

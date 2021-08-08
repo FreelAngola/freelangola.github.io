@@ -9,7 +9,7 @@ if ((!isset($_SESSION['telefone']) == true) || (!isset($_SESSION['pass']) == tru
 ?>
 
 <!doctype html>
-<html class="no-js" lang="pt-br">
+<html class="no-js" lang="pt">
 
 <head>
     <meta charset="utf-8">
@@ -17,7 +17,7 @@ if ((!isset($_SESSION['telefone']) == true) || (!isset($_SESSION['pass']) == tru
     <title>Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
 

@@ -133,8 +133,8 @@ include("header.php");
           echo "(" . $resr . ")"; ?>
         </strong> |
       </a>
-      <a id="a_top" href="covid.html">Sobre a COVID-19 |</a>
-      <a id="a_top" href="jogos.html">Jogos |</a>
+      <a id="a_top" href="../html/covid.html">Sobre a COVID-19 |</a>
+      <a id="a_top" href="../html/jogos.html">Jogos |</a>
       <a id="a_top" href="menu.php">Menu</a>
     </center>
   </fieldset>

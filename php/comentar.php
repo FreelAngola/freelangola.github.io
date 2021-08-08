@@ -94,7 +94,8 @@ $nome = $dados['nome'];
         <?php
         echo "<h2>Comentarios:</h2>";
         $consultar = "SELECT use_name, comentario  FROM comentarios WHERE post_id=$idee LIMIT 0,100 ";
-        $resultadosss = $mysqli_connection->query($consultar);;
+        $resultadosss = $mysqli_connection->query($consultar);
+        
         while ($dados = mysqli_fetch_array($resultadosss)) {
             $hhh = $dadoss['use_name'];
             $conss = "SELECT id FROM cadastrados WHERE nome='$hhh' ";

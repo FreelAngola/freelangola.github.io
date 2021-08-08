@@ -69,38 +69,43 @@ include('header.php');
     <center>
       <a id="a_top" href="site.php">Inicial |</a>
       <a id="a_top" href="perfil_gokside_2020.php">Perfil |</a>
-      <a id="a_top" href="chatgoksidersonline.php">Amigos Online <?php $fu = $_SESSION['chat'];
-                                                                  if ($fu < 1) {
-                                                                    echo "";
-                                                                  };
-                                                                  if ($fu > 0) {
-                                                                    echo "(" . $fu . ")";
-                                                                  } ?> |</a>
+      <a id="a_top" href="chatgoksidersonline.php">
+        Amigos Online
+        <?php $fu = $_SESSION['chat'];
+        if ($fu < 1) {
+          echo "";
+        };
+        if ($fu > 0) {
+          echo "(" . $fu . ")";
+        } ?> |</a>
       <a id="a_top" href="notificacao.php">
         <strong>
-          Novidades <?php $fuu = $_SESSION['noti'];
-                    if ($fuu < 1) {
-                      echo "";
-                    };
-                    if ($fuu > 0) {
-                      echo "(" . $fuu . ")";
-                    } ?>
+          Novidades
+          <?php $fuu = $_SESSION['noti'];
+          if ($fuu < 1) {
+            echo "";
+          };
+          if ($fuu > 0) {
+            echo "(" . $fuu . ")";
+          } ?>
         </strong> |
       </a>
       <a id="a_top" href="mensagens.php">
         <strong>
-          Conversas <?php $consult = "SELECT DISTINCT mensageiro FROM msg ";
-                    $resu = $mysqli_connection->query($consult);
-                    $res = mysqli_num_rows($resu);
-                    echo "(" . $res . ")"; ?>
+          Conversas
+          <?php $consult = "SELECT DISTINCT mensageiro FROM msg ";
+          $resu = $mysqli_connection->query($consult);
+          $res = mysqli_num_rows($resu);
+          echo "(" . $res . ")"; ?>
         </strong> |
       </a>
       <a id="a_top" href="pub_emprego.php">
         <strong>
-          OLX <?php $consultr = "SELECT * FROM empregos ";
-              $resur = $mysqli_connection->query($consultr);
-              $resr = mysqli_num_rows($resur);
-              echo "(" . $resr . ")"; ?>
+          OLX
+          <?php $consultr = "SELECT * FROM empregos ";
+          $resur = $mysqli_connection->query($consultr);
+          $resr = mysqli_num_rows($resur);
+          echo "(" . $resr . ")"; ?>
         </strong> |
       </a>
       <a id="a_top" href="../html/covid.html">Sobre a COVID-19 |</a>

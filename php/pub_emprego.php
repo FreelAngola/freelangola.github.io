@@ -96,60 +96,65 @@ include_once("header.php");
                     if ($fuu > 0) {
                         echo "(" . $fuu . ")";
                     } ?>
+                </strong>|
+            </a>
 
-                </strong>|</a>
+            <a id="a_top" href="mensagens.php">
+                <strong>
+                    Conversas
+                    <?php $consult = "SELECT DISTINCT mensageiro FROM msg ";
+                    $resu = $mysqli_connection->query($consult);
+                    $res = mysqli_num_rows($resu);
+                    echo "(" . $res . ")";
+                    ?>
+                </strong>|
+            </a>
 
-            <a id="a_top" href="mensagens.php"><strong>Conversas <?php $consult = "SELECT DISTINCT mensageiro FROM msg ";
-                                                                    $resu = $mysqli_connection->query($consult);
-                                                                    $res = mysqli_num_rows($resu);
-                                                                    echo "(" . $res . ")";
 
-                                                                    ?> </strong>|</a>
-
-
-            <a id="a_top" href="pub_emprego.php"><strong>OLX <?php $consultr = "SELECT * FROM empregos ";
-                                                                $resur = $mysqli_connection->query($consultr);
-                                                                $resr = mysqli_num_rows($resur);
-                                                                echo "(" . $resr . ")";
-
-                                                                ?> </strong>|</a>
+            <a id="a_top" href="pub_emprego.php">
+                <strong>
+                    OLX
+                    <?php $consultr = "SELECT * FROM empregos ";
+                    $resur = $mysqli_connection->query($consultr);
+                    $resr = mysqli_num_rows($resur);
+                    echo "(" . $resr . ")";
+                    ?>
+                </strong>|
+            </a>
             <a id="a_top" href="pub_emprego.php">OLX |</a>
-            <a id="a_top" href="covid.html">Sobre a COVID-19 |</a>
-            <a id="a_top" href="jogos.html">Jogos |</a>
-            <a id="a_top" href="menu.html">Menu </a>
+            <a id="a_top" href="../html/covid.html">Sobre a COVID-19 |</a>
+            <a id="a_top" href="../html/jogos.html">Jogos |</a>
+            <a id="a_top" href=",,/html/menu.html">Menu </a>
 
         </center>
     </fieldset>
 
     <fieldset id="fie2">
-        <a href="venderProdutoouartigos.php"><img src='img/produto.png' width='10px' height='10px'>Vender um produto/artigo</a>
+        <a href="venderProdutoouartigos.php"><img src='../img/produto.png' width='10px' height='10px'>Vender um produto/artigo</a>
     </fieldset>
-</body>
-<hr>
-<center>
-    <h1>Disponíveis</h1>
-</center>
-<?php
-
-$consulta = "SELECT * FROM empregos";
-$resultado = $mysqli_connection->query($consulta);
-while ($dados = mysqli_fetch_array($resultado)) {
-?>
     <hr>
-    <p>
-    <h2><?= $dados['usuario'] ?></h2>
-    </p>
-    <p><?php
+    <center>
+        <h1>Disponíveis</h1>
+    </center>
+    <?php
 
+    $consulta = "SELECT * FROM empregos";
+    $resultado = $mysqli_connection->query($consulta);
+    while ($dados = mysqli_fetch_array($resultado)) {
+    ?>
+        <hr>
+        <p>
+        <h2><?= $dados['usuario'] ?></h2>
+        </p>
+        <p>
+        <?php
         echo "<a href='#'>" . $dados['tipo_de_emprego'] . "</a><br><br>";
-
-
         echo "Preço: " . $dados['onde'] . "AOA<br>";
         echo "Localização: " . $dados['descricao'] . "<br>";
-
         echo "Forma de negociação Via " . $dados['pagamento'] . "";
         echo "<br><a href='#'><img src='img/emprego.png' width='10px' height='10px'> enviar mensagem</a>";
-    } ?></p>
-    <hr>
+    } ?>
+        </p>
+</body>
 
 </html>

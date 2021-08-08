@@ -7,7 +7,7 @@
   <title>Adicionar Foto de Perfil</title>
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap/bootstrap.min.js"></script>
-  <link rel="icon" type="../img/blogs-for-freelancers.png" href="../img/blogs-for-freelancers.png" />
+  <link rel="icon" href="../img/blogs-for-freelancers.png" />
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
   <style>
